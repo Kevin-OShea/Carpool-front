@@ -15,7 +15,7 @@ const submitCode = function (event) {
 const api = function (code, room) {
   return $.ajax({
     method: 'PATCH',
-    url: 'https://kevin-oshea.github.io/Carpool-Front/carpools/addCode',
+    url: 'https://intense-dawn-79586.herokuapp.com/carpools/addCode',
     data: {
       code: code,
       roomID: room
