@@ -6,7 +6,7 @@ const submitCode = function (event) {
   const room = params.get('state')
   console.log(code + ' ' + room)
   call(code, room)
-    .then(() => console.log('worked'))
+    .then((response) => console.log(response))
     .catch(error => console.log(error))
 }
 
