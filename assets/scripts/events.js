@@ -9,12 +9,11 @@ const submitCode = function (event) {
     .then((response) => console.log(response))
     .catch(error => console.log(error))
 }
-// 'https://intense-dawn-79586.herokuapp.com/carpools/addCodes'
 
 const call = function (code, room) {
   return $.ajax({
     method: 'PATCH',
-    url: 'https://intense-dawn-79586.herokuapp.com/carpools/addCode/',
+    url: 'https://intense-dawn-79586.herokuapp.com/carpools/addCode',
     data: {
       code: code,
       roomID: room
