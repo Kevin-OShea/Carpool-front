@@ -4,7 +4,7 @@ const submitCode = function (event) {
   const params = new URLSearchParams(location.search) // location.search
   const code = params.get('code')
   const room = params.get('state')
-  console.log(code + ' ' + room)
+  console.log(code + ' code : room ' + room)
   call(code, room)
     .then((response) => console.log(response))
     .catch(error => console.log(error))
