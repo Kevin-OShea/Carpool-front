@@ -7,6 +7,10 @@ const submitCode = function (event) {
   console.log(code + ' ' + room)
   // http://localhost:4741/carpools/addCode
   // https://kevin-oshea.github.io/Carpool-Front/carpools/addCode
+  // data: {
+  //   code: code,
+  //   roomID: room
+  // }
   api(code, room)
     .then(() => console.log('worked'))
     .catch(error => console.log(error))
@@ -14,12 +18,8 @@ const submitCode = function (event) {
 
 const api = function (code, room) {
   return $.ajax({
-    method: 'PATCH',
-    url: 'https://intense-dawn-79586.herokuapp.com/carpools/addCode',
-    data: {
-      code: code,
-      roomID: room
-    }
+    method: 'GET',
+    url: 'https://intense-dawn-79586.herokuapp.com/carpools/'
   })
 }
 module.exports = {
