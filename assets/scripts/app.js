@@ -7,6 +7,5 @@
 // require('./example')
 const events = require('./events')
 $(() => {
-  // your JS code goes here
   $('#id').on('submit', events.submitCode)
 })
