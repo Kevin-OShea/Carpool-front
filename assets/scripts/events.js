@@ -5,13 +5,13 @@ const submitCode = function (event) {
   const code = params.get('code')
   const room = params.get('state')
   console.log(code + ' ' + room)
+  // http://localhost:4741/carpools/addCode
+  // https://kevin-oshea.github.io/Carpool-Front/carpools/addCode
   api(code, room)
     .then(() => console.log('worked'))
     .catch(error => console.log(error))
 }
 
-// http://localhost:4741/carpools/addCode
-// https://kevin-oshea.github.io/Carpool-Front/carpools/addCode
 const api = function (code, room) {
   return $.ajax({
     method: 'PATCH',
