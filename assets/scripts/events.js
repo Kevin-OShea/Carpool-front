@@ -1,6 +1,8 @@
 
 const submitCode = function (event) {
   event.preventDefault()
+  $('#id').hide()
+  $('#header').html('Thank you. Please return to the app')
   const params = new URLSearchParams(location.search) // location.search
   const code = params.get('code')
   const room = params.get('state')
