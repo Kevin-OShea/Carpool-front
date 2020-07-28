@@ -13,7 +13,7 @@ const submitCode = function (event) {
 const call = function (code, room) {
   return $.ajax({
     method: 'PATCH',
-    url: 'http://localhost:4741/carpools/addCode',
+    url: 'https://intense-dawn-79586.herokuapp.com/carpools/addCode',
     data: {
       code: code,
       roomID: room
